@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'tutorial11-2.dart';
 import 'tutorial10_2.dart';
+import 'tutorial_10_2_b.dart';
 
 // 2311102246_Annasya Maulafidatu Zahra
 class MyApp11_1 extends StatefulWidget {
@@ -46,11 +47,30 @@ class _MyApp11_1State extends State<MyApp11_1> {
             // Halaman 2 - Email
             MyApp11_2(),
 
-            // Halaman 3 - Profile
-            const Center(
-              child: Text('Profile page', style: TextStyle(fontSize: 30)),
+            // Halaman 3 - Profile (Berisi Tombol ke Data Produk Laravel)
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                    vertical: 15,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyApp12()),
+                  );
+                },
+                child: const Text(
+                  'Lihat Data Produk (Tugas 10.2)',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
             ),
 
+            // Halaman 4 - Gempa
             ModNetworking(),
           ],
         ),
