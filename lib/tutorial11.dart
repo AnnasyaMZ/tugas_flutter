@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'tutorial11-2.dart';
+import 'tutorial10_2.dart';
 
 // 2311102246_Annasya Maulafidatu Zahra
 class MyApp11_1 extends StatefulWidget {
@@ -49,6 +50,8 @@ class _MyApp11_1State extends State<MyApp11_1> {
             const Center(
               child: Text('Profile page', style: TextStyle(fontSize: 30)),
             ),
+
+            ModNetworking(),
           ],
         ),
       ),
@@ -71,6 +74,10 @@ class _MyApp11_1State extends State<MyApp11_1> {
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.email), label: 'Email'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.warning_rounded),
+            label: 'Gempa',
+          ),
         ],
       ),
     );
